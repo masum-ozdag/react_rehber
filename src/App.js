@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ExampleModal from "./companents/ExampleModal";
+import Tablee from "./companents/Tablee";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Update from "./companents/Update";
 
 function App() {
+  const [person, setPerson] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Update /> */}
+      <ExampleModal person={person} setPerson={setPerson} />
+
+      <Tablee person={person} setPerson={setPerson} />
     </div>
   );
 }
